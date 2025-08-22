@@ -22,7 +22,6 @@ section {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
   vertical-align: baseline;
   background: transparent;
   -webkit-box-sizing: border-box;
@@ -39,14 +38,6 @@ h2,
 h3 {
   line-height: 1.4;
   font-weight: normal;
-}
-
-img {
-  vertical-align: top;
-  max-width: 100%;
-  font-size: 0;
-  line-height: 1;
-  -ms-interpolation-mode: bicubic;
 }
 
 ul {
