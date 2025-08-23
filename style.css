@@ -3180,7 +3180,6 @@ dialog.js-show::backdrop {
 
 .p-modal__content {
   overflow: hidden;
-  opacity: 0;
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
   width: min(1000px, 95%);
@@ -3481,5 +3480,406 @@ textarea::placeholder {
     padding: 0px;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+
+.p-form__error {
+  color: #e55353;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  min-height: 1em;
+}
+
+.is-invalid {
+  border-color: #e55353 !important;
+  background-color: #fff7f7;
+}
+
+#submitBtn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ラジオはネイティブUIを使う＆色だけ指定 */
+input[type="radio"] {
+  -webkit-appearance: auto !important;
+  appearance: auto !important;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  accent-color: #007BFF;
+  /* 丸の色 */
+}
+
+
+
+
+
+
+
+
+
+
+/* ラベルテキストの左に□を描く */
+.p-form__privacy-text {
+  position: relative;
+  padding-left: 1.75rem;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+.p-form__privacy-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  /* 角丸。四角にしたいなら 0 でもOK */
+  background: #fff;
+}
+
+/* 既存の “チェック画像を出す” 指定を活かす */
+.p-form__privacy-text.is-checked::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .0625rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(images/contact-icon-check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: block;
+}
+
+/* ネイティブのまま色だけ */
+input[type="checkbox"] {
+  -webkit-appearance: auto;
+  appearance: auto;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  accent-color: #007BFF;
+}
+
+/* ラベルの並びと余白 */
+.p-form__item label,
+.p-form__privacy label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-right: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ラジオ復活・最優先で適用（末尾に置く） */
+.p-form__item input[type="radio"] {
+  -webkit-appearance: auto !important;
+  appearance: none !important;
+  position: static !important;
+  opacity: 1 !important;
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  vertical-align: middle !important;
+  accent-color: #007BFF;
+  margin: 0 6px 0 1em !important;
+  appearance: none!important;
+  border: 2px solid #ccc!important;
+  border-radius: 50%;
+  background-color: #fff!important;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 6px 0 1em;
+}
+
+/* 選択時の中の● & 枠色を青に */
+.p-form__item input[type="radio"]:checked {
+  border-color: #007BFF;
+}
+
+/* キーボード操作のフォーカス可視化 */
+.p-form__item input[type="radio"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, .3);
+}
+
+
+/* radio：枠グレー / 選択で中が青＋枠も青 */
+.p-form__item input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #BFC4CC;
+  /* 枠=薄グレー */
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: 0 .5rem 0 1em;
+}
+
+.p-form__item input[type="radio"]:checked {
+  border-color: #007BFF;
+}
+
+.p-form__item input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: #007BFF;
+}
+
+.p-form__item input[type="radio"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, .3);
+}
+
+/* checkbox：枠グレー / チェックで青 */
+.p-form__item input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #BFC4CC;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+
+.p-form__item input[type="checkbox"]:checked {
+  border-color: #007BFF;
+  background: #007BFF;
+}
+
+.p-form__item input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* ラベル側で描いていた丸/四角を無効化（残っている場合） */
+.p-form__item label::before,
+.p-form__item label::after {
+  content: none !important;
+}
+
+
+
+/* クリックを最優先させる */
+.p-form__item input[type="radio"],
+.p-form__item input[type="checkbox"] {
+  position: relative !important;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+  display: inline-block;
+  /* 念のため */
+}
+
+/* かぶる装飾を消す or クリック無効化 */
+.p-franchise__contact::before,
+.p-franchise__contact::after,
+.p-franchise__contact-contents::before,
+.p-franchise__contact-contents::after,
+.p-form__submit::before,
+.p-form__submit::after,
+.c-button__submit::before,
+.c-button__submit::after {
+  /* どちらか一方でOK */
+  /* content: none !important; display: none !important; */
+  pointer-events: none !important;
+  /* ← 触れないだけでも可 */
+  z-index: 0 !important;
+}
+
+.p-form__item label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  /* 入力よりは低く */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.c-btn__thanks {
+  text-align: center
+}
+
+.c-btn__thanks a {
+  padding: 1rem 1.875rem;
+  width: min(25rem, 100%);
+  color: #fff;
+  background: #027dcc;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 150%;
+  border-radius: 100vmax;
+  border: 1px solid #027dcc;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease
+}
+
+@media(any-hover: hover) {
+  .c-btn__thanks a:hover {
+    background: #fff;
+    color: #027dcc
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .c-btn__thanks a {
+    font-size: 1rem
+  }
+}
+
+.p-thanks__inner {
+  width: min(60rem, 100%)
+}
+
+.p-thanks__title {
+  color: #027dcc;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 150%
+}
+
+@media screen and (max-width: 767px) {
+  .p-thanks__title {
+    font-size: 1.5rem
+  }
+}
+
+.p-thanks__text {
+  font-size: 1.125rem;
+  line-height: 170%;
+  margin-top: 5rem
+}
+
+@media screen and (max-width: 767px) {
+  .p-thanks__text {
+    font-size: 1rem;
+    margin-top: 2.5rem
+  }
+}
+
+.p-thanks__btn {
+  margin-top: 5rem
+}
+
+@media screen and (max-width: 767px) {
+  .p-thanks__btn {
+    margin-top: 2.5rem
   }
 }
