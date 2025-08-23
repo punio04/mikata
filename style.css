@@ -1310,10 +1310,10 @@ body {
     content: '';
     position: absolute;
     background: #233049c9;
-    width: 116px;
-    height: 20px;
+    width: 100px;
+    height: 14px;
     z-index: -1;
-    top: 28px;
+    top: 27px;
   }
 }
 
@@ -3340,7 +3340,7 @@ textarea::placeholder {
   }
 
   .l-section {
-    padding-block: 2.5rem 0;
+    padding-block: 3.5rem;
   }
 
   .gb-image-91c8c7d7 {
@@ -3361,44 +3361,50 @@ textarea::placeholder {
   }
 
   .gb-image-91c8c7d7 {
-    width: 80px;
+    width: 100px;
   }
 
   .gb-container-0ecbe6ae {
     flex-direction: row;
     justify-content: center;
     column-gap: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
     border-radius: 5px;
   }
 
   .gb-image-ad1cdc8b {
-    width: 80px;
+    width: 100px;
   }
 
   .gb-container-24a73007 {
     flex-direction: row;
     justify-content: center;
     column-gap: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
     border-radius: 5px;
   }
 
   .gb-image-202a0e71 {
-    width: 80px;
+    width: 100px;
   }
 
   .gb-container-2d3205b0 {
     flex-direction: row;
     justify-content: center;
     column-gap: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
     border-radius: 5px;
+  }
+
+  .p-franchise__voice-card-img {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 9.75rem;
   }
 }

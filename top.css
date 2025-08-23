@@ -306,6 +306,11 @@
     background-color: #e8e8e8;
     border-radius: 10px;
   }
+
+  .l-inner {
+    padding: 0 1rem;
+    width: 100%;
+  }
 }
 
 
@@ -570,7 +575,7 @@ screen and (min-width: 769px) {
 
 @media only screen and (max-width: 550px) {
   .features {
-    padding: 100px 0 20px 0;
+    padding: 100px 0 35px 0;
     background-color: #F0F6FC;
     margin: 0 0px;
   }
@@ -647,5 +652,9 @@ screen and (min-width: 769px) {
 
   .features .wrap {
     margin: 1.5rem 0;
+  }
+
+  .trouble .ques {
+    padding: 50px 0 0px 0;
   }
 }
