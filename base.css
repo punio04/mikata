@@ -64,7 +64,14 @@ screen and (min-width: 769px) {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+  .site_wrap {
+    padding-left: 9.999vw;
+    padding-right: 9.999vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
   .site_wrap {
     padding-left: 3.999vw;
     padding-right: 3.999vw;

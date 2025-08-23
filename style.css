@@ -2027,6 +2027,15 @@ button.gb-button-2f5d3241 .gb-icon svg {
   margin-left: auto;
 }
 
+@media screen and (max-width: 1250px) {
+  .gb-container-4fb341d3 {
+    max-width: 100%;
+    padding: 0 40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .gb-container-6affafd2 {
   padding-right: 20px;
   padding-left: 20px;
@@ -2080,10 +2089,6 @@ button.gb-button-2f5d3241 .gb-icon svg {
 
   .gb-container-accordion_content {
     padding: 10px;
-  }
-
-  .gb-container-dd270895 {
-    padding: 40px 15px;
   }
 
   .gb-container-6affafd2 {
@@ -2186,8 +2191,19 @@ body:is(.single-post, .category, .tag) .main-nav ul:not(.sub-menu) li.posts>a {
   }
 
   .gb-container-accordion.faq .gb-button-accordion_ttl:before {
-    top: 10px;
-    left: 10px;
+    left: 5px;
+  }
+
+  .gb-headline-952059c7 {
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .gb-headline-8acf1a90 {
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: normal;
   }
 
   #nav-below#nav-below :is(.prev, .next) {
@@ -2567,11 +2583,35 @@ textarea {
   margin-inline: auto
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .l-inner {
     width: 100%;
     max-width: 640px;
     padding: 0 1.25rem
+  }
+
+  .campaign {
+    background: url(images/camp_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 7.5rem 40px;
+  }
+
+  .flow {
+    background: url(images/flow_bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 7.5rem 40px;
+  }
+
+  .color::before {
+    content: '';
+    position: absolute;
+    background: #233049c9;
+    width: 120px;
+    height: 20px;
+    z-index: -1;
+    top: 28px;
   }
 }
 
@@ -3264,7 +3304,20 @@ textarea::placeholder {
 
 
 
+@media (max-width: 768px) {
+  .gb-container-dd270895 {
+    padding: 40px 15px;
+  }
 
+  .l-section__inner {
+    row-gap: 2.5rem;
+  }
+
+  .l-inner {
+    width: 100%;
+    padding: 0 1.25rem;
+  }
+}
 
 
 
@@ -3337,6 +3390,21 @@ textarea::placeholder {
     border-style: solid;
     border-width: 0.9rem .6rem 0 0.6rem;
     border-color: #233049 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  }
+
+
+  .campaign {
+    background: url(images/camp_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 13% 20px;
+  }
+
+  .flow {
+    background: url(images/flow_bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 12% 10px 4% 10px;
   }
 
   .l-section {
